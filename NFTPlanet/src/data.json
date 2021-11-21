@@ -1,0 +1,38 @@
+[
+  {
+      "id": 0,
+      "name": "Badass Franklin",
+      "picture": "images/1.jpg",
+      "description": "Former president of the United States of America",
+      "minimum_increment": "2",
+      "original_price": "20",
+      "more_info": "https://en.wikipedia.org/wiki/Vase"
+  },
+  {
+      "id": 1,
+      "name": "Cryptocat",
+      "picture": "images/2.png",
+      "description": "First ever non-fungible art item",
+      "minimum_increment": "20",
+      "original_price": "200",
+      "more_info": "https://en.wikipedia.org/wiki/Mona_Lisa"
+  },
+  {
+      "id": 2,
+      "name": "Purple Cat",
+      "picture": "images/3.jpeg",
+      "description": "One of the most famous NFT",
+      "minimum_increment": "35",
+      "original_price": "150",
+      "more_info": "https://en.wikipedia.org/wiki/The_Starry_Night"
+  },
+  {
+      "id": 3,
+      "name": "Illustration Brain",
+      "picture": "images/4.jpeg",
+      "description": "3D Rendered NFT",
+      "minimum_increment": "100",
+      "original_price": "1000",
+      "more_info": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People"
+  }
+]
