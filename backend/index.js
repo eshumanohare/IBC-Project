@@ -24,7 +24,14 @@ app.post("/", (req, res) => {
     console.log(data2);
     fs.writeFileSync("../NFTPlanet/src/save.json",JSON.stringify(data2))
 
-    res.send("Success POST");
+     res.send("Post Request Success");
+    //     res.links({
+
+    //     middle: 'http://localhost:3000/'
+
+    // });
+    //res.send(res.get('link'));
+
 });
 
 app.listen(PORT, (err) => {

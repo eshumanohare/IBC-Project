@@ -12,7 +12,7 @@ App = {
         // data[i].id=i;
         // data[i].picture="images/"+(i)+".jpg";
         artTemplate.find('.panel-title').text(`Auction ${i+1}`); 
-        artTemplate.find('img').attr('src', data[i].picture);
+        artTemplate.find('img').attr('src', "images/"+data[i].picture);
         artTemplate.find('.art-name').text(data[i].name);  
         artTemplate.find('.art-description').text(data[i].description); 
         artTemplate.find('.min-incr').text(`$${data[i].minimum_increment}`);
