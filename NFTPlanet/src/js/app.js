@@ -4,12 +4,13 @@ App = {
   account: "0x0",
 
   init: async function() {
-    $.getJSON('../data.json', function(data) {
+    $.getJSON('../save.json', function(data) {
       var artRow = $('#artRow');
       var artTemplate = $('#artTemplate');
 
       for (i = 0; i < data.length; i ++) {
- 
+        // data[i].id=i;
+        // data[i].picture="images/"+(i)+".jpg";
         artTemplate.find('.panel-title').text(`Auction ${i+1}`); 
         artTemplate.find('img').attr('src', data[i].picture);
         artTemplate.find('.art-name').text(data[i].name);  
@@ -102,7 +103,32 @@ App = {
       }
 
   },
+//////////////////////
+ addItems: function(){
+  'use strict';
 
+  const fs = require('fs');
+  
+  let student = {
+      name: 'Mike',
+      age: 25, 
+      gender: 'Male',
+      department: 'English',
+      car: 'Honda' 
+  };
+  
+  let data = JSON.stringify(student);  
+  
+  fs.writeFileSync('abc1.json', data, finished);
+  
+  function finished(err)
+  {
+      console.log('success');
+  }
+ },
+
+
+///////////////////////
   updateAuctionPrices: function() {
     var auctionInstance;
     

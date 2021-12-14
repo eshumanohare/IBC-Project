@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NFT Planet</title>
+
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/16cdf6d73b.js" crossorigin="anonymous"></script>
+  </head>
+
+
+
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-sm bg-colored navbar-dark justify-content-end">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <i class="fas fa-paint-brush"></i>
+            NFT Planet
+          </a>
+          <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+            <button class="btn btn-success ml-auto mr-1 account-button">Account: <span class="nav-link" id="account"></span></button>       
+          </div>
+        </div>
+        
+    </nav>
+      
+      <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Let your NFT find their true value</h3>
+            
+        </a>
+      </div>
+
+      
+    </div>
+
+
+    <div class="container" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" >
+          <h3 style="font-family:courier;">Add Item</h3>
+          
+          <form id="myForm" method="post" action="http://localhost:8080/" style="border-color: green; width: 50%;margin: 30px; margin-left: 30px 50px auto;" >
+            <div class="input-field" type="number">
+              <select type="number" id="id" name="id" class="id" style="display: block;margin-top: 20px;" > 
+                <option value="">--ID--</option>
+            </select>
+            
+            </div>
+            <div class="input-field">
+              <input type="text" name="name" id="name" placeholder="Full Name" style="margin-top: 30px;">
+            </input>
+              </div>
+              <div class="input-field">
+                <input type="file" id="picture" name="picture" class="picture" style="margin-top: 20px;" > 
+                  <!-- <option value="">--Picture--</option> -->
+              </select>
+              
+              </div>
+            <div class="input-field"> 
+  
+              <!-- <input type="text" name="description" id="description" placeholder="Description" style="height: 100px; width: 100%;margin: 20px auto 20px auto;"> -->
+              <textarea id="description" name="description" cols="100" rows="8" placeholder="Description" style="height: 100px; width: 100%;margin: 20px auto 20px auto;"></textarea>
+              </div>
+                <div class="input-field">
+
+                  <select id="min_inc" name="minimum_increment"  class="min_inc" style="margin-top: 20px;" > 
+                    <option value="0">--Minimum Increment--</option>
+                </select>
+                </div>
+                <div class="input-field">
+
+                  <select id="org_price" name="original_price"  class="org_price" style="margin-top: 30px;" > 
+                    <option value="0">--Original Price--</option>
+                </select>
+                </div> 
+                <div class="input-field">
+                <input type="url" id="url" name="more_info" placeholder="URL" style="margin-top: 30px;">
+                </div>
+                  <!-- <input type="number" name="rollno" id="rollno" placeholder="rollno" class="mx-3"> -->
+                  <!-- <input type="number" name="gpa" id="gpa" placeholder="gpa"  style="margin-left: 30px";> -->
+  
+                  <div class="form-row" >
+                    <button style="background-color: #4CAF50;margin-top: 30px;">
+                      Submit
+                  </button>
+                </div>
+              
+          </form>
+          
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+  <script type="text/javascript">
+    window.onload = function () {
+      var ddl = document.getElementById('min_inc');
+      var ddl2 = document.getElementById('org_price');
+      var ddl3 = document.getElementById('id');
+      var ddl4 = document.getElementById('picture');
+for (var i = 1; i <= 1000; i++) {
+    var theOption = new Option;
+    var theOption2 = new Option;
+    theOption.text = i;
+    theOption.value = i;
+    theOption2.text = i;
+    theOption2.value = i;
+    ddl.options[i] = theOption;
+    ddl2.options[i] = theOption2;
+
+  }
+for(var i=1;i<=10;i++){
+    var theOption3 = new Option;
+    theOption3.text = i;
+    theOption3.value = i;
+    ddl3.options[i] = theOption3;
+}
+// for(var i=1;i<=10;i++){
+//     var optn = "images/"+i+".jpeg";
+//     var el = document.createElement("option");
+//     el.textContent = optn;
+//     el.value = optn;
+//     ddl4.appendChild(el);
+// }
+console.log("ok");
+    };
+
+    
+</script>
+
+
+
+
+
+
+<script>
+  $(document).ready(function() {
+   $("#submit").click(function(e){
+'use strict';
+
+const fs = require('fs');
+
+let student = {
+    name: 'Mike',
+    age: 25, 
+    gender: 'Male',
+    department: 'English',
+    car: 'Honda' 
+};
+
+let data = JSON.stringify(student);  
+
+fs.writeFileSync('abc1.json', data, finished);
+
+function finished(err)
+{
+    console.log('success');
+}
+});
+});
+</script>
+
+
+
+</html>
